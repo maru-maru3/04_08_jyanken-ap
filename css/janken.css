@@ -1,0 +1,46 @@
+.gu{
+    width:200px;
+}
+
+.cho{
+width:200px;
+}
+
+.par{
+width:200px;
+}
+
+.computer{
+    font-size: xx-large;
+    height:110px;
+}
+
+#judgment{
+    font-size: xx-large;
+    height:60px;
+}
+
+.header-obi{
+ width: 700px;
+ height: 80px;
+ background-color: black;
+ text-align: center;
+ margin-left: auto;
+margin-right: auto;
+}
+
+h1{
+    font-size: 50px;
+    color: white;
+    margin: 0pt;
+}
+
+h2{
+    font-size: 25px;
+    margin:50px;
+}
+
+#head-in {
+    width:100%;
+    background: repeating-linear-gradient(-45deg, #edf5f4, #0e302c 10px, #f6faf9 0, #16312a 10px);
+}

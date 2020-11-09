@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/sample.css">
+  <link rel="stylesheet" href="css/janken.css">
+  <title>じゃんけん</title>
+</head>
+
+<body>
+  <header>
+    <div id="head-in">
+      <div class="header-obi">
+        <h1>ジャン・ケン・ゲーム</h1>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <h2>アイコンをクリックして、コンピューターと戦おう！</h2>
+
+    <ul>
+      <li id="gu_btn"><img class="gu" src="img/gu1.png" alt="グー"></li>
+      <li id="cho_btn"><img class="cho" src="img/cyoki1.png" alt="チョキ"></li>
+      <li id="par_btn"><img class="par" src="img/pa1.png" alt="パー"></li>
+    </ul>
+    <div>コンピュータの出した手は？</div>
+    <div class="computer" id="com_hand"></div>
+    <div>結果は？</div>
+    <div id="judgment"></div>
+  </main>
+
+  <footer>フッター</footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+
+    // 写経文のscript
+
+    $(function () {
+      const result = ['グー', 'チョキ', 'パー'];
+
+      $('#gu_btn').on('click', function () {
+        // 自分の手はグー
+        let rand = Math.floor(Math.random() * 3);
+        // result[rand]がコンピューターの手の結果の箇所
+        $('#com_hand').text(result[rand]);
+        if (rand == 0) {
+          $('#judgement').text('あいこ');
+        } else if (rand == 1) {
+          $('#judgement').text('勝ち');
+        } else {
+          $('#judgement').text('負け');
+        }
+
+      });
+
+
+
+
+      $('#cho_btn').on('click', function () {
+        // 自分の手はチョキ
+        let rand = Math.floor(Math.random() * 3);
+        // 0はコンピュータがグーの時、以下それぞれ
+        // result[rand]がコンピューターの手の結果の箇所
+        $('#com_hand').text(result[rand]);
+        if (rand == 0) {
+          $('#judgment').text('負け');
+        } else if (rand == 1) {
+          $('#judgment').text('あいこ');
+        } else {
+          $('#judgment').text('勝ち');
+        }
+
+      });
+
+
+
+
+      $('#par_btn').on('click', function () {
+        // 自分の手はパー
+        let rand = Math.floor(Math.random() * 3);
+        // 0はコンピュータがグーの時、以下それぞれ
+        // result[rand]がコンピューターの手の結果の箇所
+        $('#com_hand').text(result[rand]);
+        if (rand == 0) {
+          $('#judgment').text('勝ち');
+        } else if (rand == 1) {
+          $('#judgment').text('負け');
+        } else {
+          $('#judgment').text('あいこ');
+        }
+
+      });
+
+    });
+      // 写経ここまで
+
+
+
+
+  </script>
+
+</body>
+
+</html>
